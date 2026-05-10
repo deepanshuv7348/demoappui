@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f4f4f4;
+}
+
+@layer components {
+  .btn-mmt {
+    @apply bg-mmt-500 hover:bg-mmt-600 text-white font-bold py-3 px-8 rounded transition-all duration-200 active:scale-95;
+  }
+  .btn-navy {
+    @apply bg-navy-600 hover:bg-navy-700 text-white font-bold py-3 px-8 rounded transition-all duration-200 active:scale-95;
+  }
+  .btn-gold {
+    @apply bg-gold-500 hover:bg-gold-600 text-white font-bold py-3 px-8 rounded transition-all duration-200 active:scale-95;
+  }
+  .btn-outline-navy {
+    @apply border-2 border-navy-500 text-navy-600 hover:bg-navy-600 hover:text-white font-bold py-2.5 px-6 rounded transition-all duration-200;
+  }
+  .btn-outline-mmt {
+    @apply border-2 border-mmt-500 text-mmt-500 hover:bg-mmt-500 hover:text-white font-bold py-2.5 px-6 rounded transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded focus:ring-1 focus:ring-mmt-400 focus:border-mmt-400 outline-none transition-all duration-200 bg-white text-sm;
+  }
+  .card {
+    @apply bg-white rounded-lg shadow-card hover:shadow-card-hover transition-all duration-300;
+  }
+  .badge-pending {
+    @apply bg-gold-100 text-gold-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide;
+  }
+  .badge-accepted {
+    @apply bg-teal-100 text-teal-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide;
+  }
+  .badge-delivered {
+    @apply bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide;
+  }
+  .badge-cancelled {
+    @apply bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide;
+  }
+  .mmt-gradient {
+    background: linear-gradient(180deg, #1A2744 0%, #2B3A67 100%);
+  }
+  .mmt-hero-gradient {
+    background: linear-gradient(135deg, #1A2744 0%, #2B3A67 50%, #151E38 100%);
+  }
+  .deal-gradient {
+    background: linear-gradient(135deg, #E2136E 0%, #D0021B 100%);
+  }
+}
